@@ -1,31 +1,1545 @@
-Avi Tech Info Telugu
-────────────────────────────
-Home | Linux | AWS | DevOps | Interview Q&A | Free Notes | YouTube
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        Learn Linux, AWS & DevOps
-             in Telugu
+    <title>Avi Tech Info Telugu | Linux AWS DevOps</title>
 
-     [Start Learning] [YouTube Channel]
+    <meta name="description"
+          content="Learn Linux, AWS and DevOps in Telugu with practical tutorials, interview questions, notes and real-world examples.">
 
-        🐧        ☁️        ⚙️
-       Linux     AWS      DevOps
+    <meta name="keywords"
+          content="Linux Telugu, AWS Telugu, DevOps Telugu, Linux tutorials, AWS tutorials, DevOps interview questions">
 
-Latest Tutorials
-────────────────────────────
-[ Linux Video ] [ AWS Video ] [ DevOps Video ]
+    <style>
 
-Popular Learning Paths
-────────────────────────────
-🐧 Linux Fundamentals
-☁️ AWS for Beginners
-⚙️ DevOps Roadmap
+        /* =========================
+           BASIC SETTINGS
+        ========================== */
 
-Free Resources
-────────────────────────────
-📄 Notes | 📝 Interview Q&A | 🧪 Practice
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-        💬 Chat with me on WhatsApp
+        html {
+            scroll-behavior: smooth;
+        }
 
-Footer
-Avi Tech Info Telugu
-YouTube | Instagram | LinkedIn
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #070b17;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        /* =========================
+           HEADER
+        ========================== */
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(5, 9, 22, 0.96);
+            border-bottom: 1px solid #1d2942;
+            backdrop-filter: blur(10px);
+        }
+
+        .navbar {
+            min-height: 72px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            min-width: 220px;
+        }
+
+        .logo-icon {
+            width: 45px;
+            height: 45px;
+            border-radius: 10px;
+            background: linear-gradient(135deg, #087cff, #00c6ff);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 25px;
+        }
+
+        .logo-text {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .logo-text span {
+            display: block;
+            color: #ffc400;
+            font-size: 14px;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+
+        nav a {
+            color: #dce4f5;
+            font-size: 14px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #1687ff;
+        }
+
+        .menu-btn {
+            display: none;
+            background: #147df5;
+            border: none;
+            color: white;
+            padding: 10px 14px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 20px;
+        }
+
+        /* =========================
+           HERO
+        ========================== */
+
+        .hero {
+            min-height: 560px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            background:
+                radial-gradient(circle at 80% 40%, rgba(0, 110, 255, 0.18), transparent 30%),
+                radial-gradient(circle at 20% 30%, rgba(0, 195, 255, 0.08), transparent 30%),
+                #070b17;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+            background-size: 50px 50px;
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            width: 55%;
+        }
+
+        .hero h1 {
+            font-size: 52px;
+            line-height: 1.12;
+            margin-bottom: 20px;
+        }
+
+        .yellow {
+            color: #ffc400;
+        }
+
+        .hero p {
+            color: #b9c4d8;
+            font-size: 18px;
+            max-width: 650px;
+            margin-bottom: 30px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 13px 24px;
+            border-radius: 7px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn-primary {
+            background: #087cff;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #0065d8;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            border: 1px solid #77849c;
+            color: white;
+        }
+
+        .btn-outline:hover {
+            border-color: #1687ff;
+            color: #1687ff;
+        }
+
+        /* =========================
+           HERO TECH ICONS
+        ========================== */
+
+        .hero-visual {
+            position: absolute;
+            right: 4%;
+            bottom: 0;
+            width: 40%;
+            height: 430px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .person {
+            width: 240px;
+            height: 280px;
+            border-radius: 120px 120px 30px 30px;
+            background: linear-gradient(180deg, #17213a, #0d1426);
+            border: 2px solid #24385d;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 100px;
+            position: relative;
+            box-shadow: 0 0 60px rgba(0, 119, 255, 0.2);
+        }
+
+        .tech {
+            position: absolute;
+            font-size: 55px;
+            font-weight: bold;
+        }
+
+        .linux {
+            left: 2%;
+            top: 20%;
+        }
+
+        .aws {
+            right: 5%;
+            top: 16%;
+            font-size: 40px;
+            color: #ff9900;
+        }
+
+        .docker {
+            right: 0;
+            bottom: 25%;
+        }
+
+        .terraform {
+            left: 5%;
+            bottom: 25%;
+        }
+
+        /* =========================
+           STATS
+        ========================== */
+
+        .stats {
+            display: flex;
+            gap: 40px;
+            margin-top: 35px;
+            flex-wrap: wrap;
+        }
+
+        .stat {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .stat-icon {
+            width: 42px;
+            height: 42px;
+            border-radius: 9px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #15203a;
+            font-size: 20px;
+        }
+
+        .stat strong {
+            display: block;
+            font-size: 18px;
+        }
+
+        .stat small {
+            color: #8d9ab1;
+        }
+
+        /* =========================
+           SECTION
+        ========================== */
+
+        section {
+            padding: 70px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-title h2 {
+            font-size: 32px;
+            margin-bottom: 8px;
+        }
+
+        .section-title p {
+            color: #8895ac;
+        }
+
+        /* =========================
+           TOPIC CARDS
+        ========================== */
+
+        .topic-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 18px;
+        }
+
+        .topic-card {
+            padding: 25px 20px;
+            border-radius: 12px;
+            min-height: 230px;
+            border: 1px solid #24314d;
+            background: linear-gradient(145deg, #10192c, #0b1120);
+            transition: 0.3s;
+        }
+
+        .topic-card:hover {
+            transform: translateY(-7px);
+            border-color: #1687ff;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
+        }
+
+        .topic-icon {
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+        .topic-card h3 {
+            margin-bottom: 8px;
+        }
+
+        .topic-card p {
+            color: #8f9bb0;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .explore {
+            color: #1687ff;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        /* =========================
+           VIDEOS
+        ========================== */
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .video-card {
+            background: #0e1627;
+            border: 1px solid #25324c;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: 0.3s;
+        }
+
+        .video-card:hover {
+            transform: translateY(-5px);
+            border-color: #1687ff;
+        }
+
+        .thumbnail {
+            height: 150px;
+            background: linear-gradient(135deg, #101b32, #172c4c);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            font-weight: bold;
+            color: white;
+        }
+
+        .video-info {
+            padding: 16px;
+        }
+
+        .video-info h3 {
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+
+        .video-info p {
+            color: #8491a8;
+            font-size: 13px;
+        }
+
+        /* =========================
+           LEARNING PATH
+        ========================== */
+
+        .learning-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .learning-card {
+            padding: 30px;
+            background: #0d1525;
+            border: 1px solid #26344e;
+            border-radius: 12px;
+        }
+
+        .learning-card h3 {
+            font-size: 22px;
+            margin-bottom: 12px;
+        }
+
+        .learning-card p {
+            color: #8996aa;
+            margin-bottom: 20px;
+        }
+
+        .learning-card ul {
+            list-style: none;
+            color: #c3cbd8;
+        }
+
+        .learning-card li {
+            padding: 7px 0;
+            border-bottom: 1px solid #1d293e;
+        }
+
+        /* =========================
+           FREE RESOURCES
+        ========================== */
+
+        .resources {
+            background: #0b1220;
+        }
+
+        .resource-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .resource {
+            background: #111b2d;
+            border: 1px solid #26344e;
+            padding: 25px;
+            border-radius: 10px;
+        }
+
+        .resource-icon {
+            font-size: 35px;
+            margin-bottom: 12px;
+        }
+
+        .resource h3 {
+            margin-bottom: 7px;
+        }
+
+        .resource p {
+            color: #8c98aa;
+        }
+
+        /* =========================
+           NEWSLETTER
+        ========================== */
+
+        .newsletter {
+            background: linear-gradient(135deg, #092044, #07152e);
+            border-top: 1px solid #1b345c;
+            border-bottom: 1px solid #1b345c;
+        }
+
+        .newsletter-box {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .newsletter h2 {
+            margin-bottom: 8px;
+        }
+
+        .newsletter p {
+            color: #9ca9bb;
+        }
+
+        .newsletter-form {
+            display: flex;
+            width: 450px;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            padding: 14px;
+            background: #18263e;
+            border: 1px solid #33445f;
+            color: white;
+            border-radius: 6px 0 0 6px;
+            outline: none;
+        }
+
+        .newsletter-form button {
+            border: none;
+            padding: 14px 22px;
+            background: #087cff;
+            color: white;
+            font-weight: bold;
+            border-radius: 0 6px 6px 0;
+            cursor: pointer;
+        }
+
+        /* =========================
+           WHATSAPP
+        ========================== */
+
+        .whatsapp {
+            position: fixed;
+            right: 25px;
+            bottom: 25px;
+            z-index: 2000;
+            background: #25d366;
+            color: white;
+            padding: 13px 20px;
+            border-radius: 50px;
+            font-weight: bold;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.4);
+            transition: 0.3s;
+        }
+
+        .whatsapp:hover {
+            transform: scale(1.05);
+        }
+
+        /* =========================
+           FOOTER
+        ========================== */
+
+        footer {
+            background: #050914;
+            padding: 40px 0 25px;
+            border-top: 1px solid #19253a;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 50px;
+        }
+
+        footer h3 {
+            margin-bottom: 12px;
+        }
+
+        footer p {
+            color: #7f8ca1;
+        }
+
+        footer ul {
+            list-style: none;
+        }
+
+        footer li {
+            padding: 5px 0;
+            color: #a4afbf;
+        }
+
+        .copyright {
+            text-align: center;
+            border-top: 1px solid #182237;
+            margin-top: 30px;
+            padding-top: 20px;
+            color: #68758b;
+            font-size: 13px;
+        }
+
+        /* =========================
+           MOBILE
+        ========================== */
+
+        @media (max-width: 1000px) {
+
+            nav {
+                display: none;
+                position: absolute;
+                top: 72px;
+                left: 0;
+                right: 0;
+                background: #080d1a;
+                flex-direction: column;
+                padding: 25px;
+                border-bottom: 1px solid #24314b;
+            }
+
+            nav.active {
+                display: flex;
+            }
+
+            .menu-btn {
+                display: block;
+            }
+
+            .hero-content {
+                width: 100%;
+            }
+
+            .hero {
+                padding: 70px 0;
+            }
+
+            .hero-visual {
+                opacity: 0.18;
+                width: 100%;
+                right: 0;
+            }
+
+            .topic-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .video-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 650px) {
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .stats {
+                gap: 20px;
+            }
+
+            .topic-grid,
+            .video-grid,
+            .learning-grid,
+            .resource-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .newsletter-box {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .newsletter-form {
+                width: 100%;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+
+            .whatsapp {
+                right: 15px;
+                bottom: 15px;
+                padding: 11px 16px;
+                font-size: 13px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+<!-- =========================
+     HEADER
+========================== -->
+
+<header>
+
+    <div class="container navbar">
+
+        <a href="#" class="logo">
+
+            <div class="logo-icon">
+                💻
+            </div>
+
+            <div class="logo-text">
+                Avi Tech Info
+                <span>Telugu</span>
+            </div>
+
+        </a>
+
+        <button class="menu-btn" onclick="toggleMenu()">
+            ☰
+        </button>
+
+        <nav id="navigation">
+
+            <a href="#home">Home</a>
+            <a href="#topics">Linux</a>
+            <a href="#topics">AWS</a>
+            <a href="#topics">DevOps</a>
+            <a href="#interview">Interview Q&A</a>
+            <a href="#resources">Free Notes</a>
+            <a href="https://www.youtube.com/" target="_blank">YouTube</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<!-- =========================
+     HERO
+========================== -->
+
+<section class="hero" id="home">
+
+    <div class="container">
+
+        <div class="hero-content">
+
+            <h1>
+                Learn Linux, AWS & DevOps
+                <br>
+                <span class="yellow">in Telugu</span> – Step by Step
+            </h1>
+
+            <p>
+                Practical tutorials, real-world examples,
+                interview questions, notes and much more –
+                all explained in simple Telugu.
+            </p>
+
+            <div class="buttons">
+
+                <a href="https://www.youtube.com/"
+                   target="_blank"
+                   class="btn btn-primary">
+                    ▶ Subscribe on YouTube
+                </a>
+
+                <a href="#topics"
+                   class="btn btn-outline">
+                    Explore Courses
+                </a>
+
+            </div>
+
+            <div class="stats">
+
+                <div class="stat">
+                    <div class="stat-icon">👥</div>
+                    <div>
+                        <strong>21K+</strong>
+                        <small>Subscribers</small>
+                    </div>
+                </div>
+
+                <div class="stat">
+                    <div class="stat-icon">▶</div>
+                    <div>
+                        <strong>500+</strong>
+                        <small>Videos</small>
+                    </div>
+                </div>
+
+                <div class="stat">
+                    <div class="stat-icon">📥</div>
+                    <div>
+                        <strong>100+</strong>
+                        <small>Notes</small>
+                    </div>
+                </div>
+
+                <div class="stat">
+                    <div class="stat-icon">🎓</div>
+                    <div>
+                        <strong>Complete</strong>
+                        <small>Learning Path</small>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="hero-visual">
+
+            <div class="tech linux">🐧</div>
+            <div class="tech aws">AWS</div>
+            <div class="tech docker">🐳</div>
+            <div class="tech terraform">◆</div>
+
+            <div class="person">
+                👨‍💻
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     TOPICS
+========================== -->
+
+<section id="topics">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Explore Topics</h2>
+
+            <p>
+                Start learning from beginner level
+                and build your technical skills.
+            </p>
+
+        </div>
+
+        <div class="topic-grid">
+
+            <div class="topic-card">
+
+                <div class="topic-icon">🐧</div>
+
+                <h3>Linux</h3>
+
+                <p>
+                    Linux basics, commands, administration,
+                    shell scripting and troubleshooting.
+                </p>
+
+                <a href="#linux" class="explore">
+                    Explore →
+                </a>
+
+            </div>
+
+
+            <div class="topic-card">
+
+                <div class="topic-icon">☁️</div>
+
+                <h3>AWS</h3>
+
+                <p>
+                    EC2, VPC, IAM, EBS, S3 and
+                    practical AWS tutorials.
+                </p>
+
+                <a href="#aws" class="explore">
+                    Explore →
+                </a>
+
+            </div>
+
+
+            <div class="topic-card">
+
+                <div class="topic-icon">⚙️</div>
+
+                <h3>DevOps</h3>
+
+                <p>
+                    Git, Docker, Terraform, Jenkins,
+                    CI/CD and more.
+                </p>
+
+                <a href="#devops" class="explore">
+                    Explore →
+                </a>
+
+            </div>
+
+
+            <div class="topic-card">
+
+                <div class="topic-icon">💼</div>
+
+                <h3>Interview Q&A</h3>
+
+                <p>
+                    Linux, AWS and DevOps interview
+                    questions with simple answers.
+                </p>
+
+                <a href="#interview" class="explore">
+                    Explore →
+                </a>
+
+            </div>
+
+
+            <div class="topic-card">
+
+                <div class="topic-icon">📄</div>
+
+                <h3>Free Notes</h3>
+
+                <p>
+                    Download notes, cheat sheets,
+                    PPTs and learning resources.
+                </p>
+
+                <a href="#resources" class="explore">
+                    Explore →
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     LATEST VIDEOS
+========================== -->
+
+<section id="videos">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Latest YouTube Videos</h2>
+
+            <p>
+                Learn through practical video tutorials.
+            </p>
+
+        </div>
+
+        <div class="video-grid">
+
+
+            <a href="https://www.youtube.com/"
+               target="_blank"
+               class="video-card">
+
+                <div class="thumbnail">
+                    🐧 Linux
+                </div>
+
+                <div class="video-info">
+
+                    <h3>
+                        What is Linux? Why Do We Use Linux?
+                    </h3>
+
+                    <p>
+                        Linux Tutorial in Telugu
+                    </p>
+
+                </div>
+
+            </a>
+
+
+            <a href="https://www.youtube.com/"
+               target="_blank"
+               class="video-card">
+
+                <div class="thumbnail">
+                    ☁️ AWS EC2
+                </div>
+
+                <div class="video-info">
+
+                    <h3>
+                        AWS EC2 Full Tutorial
+                    </h3>
+
+                    <p>
+                        AWS EC2 for Beginners
+                    </p>
+
+                </div>
+
+            </a>
+
+
+            <a href="https://www.youtube.com/"
+               target="_blank"
+               class="video-card">
+
+                <div class="thumbnail">
+                    ☁️ VPC
+                </div>
+
+                <div class="video-info">
+
+                    <h3>
+                        VPC in AWS – Complete Guide
+                    </h3>
+
+                    <p>
+                        Learn AWS Networking
+                    </p>
+
+                </div>
+
+            </a>
+
+
+            <a href="https://www.youtube.com/"
+               target="_blank"
+               class="video-card">
+
+                <div class="thumbnail">
+                    🐳 Docker
+                </div>
+
+                <div class="video-info">
+
+                    <h3>
+                        Docker for Beginners
+                    </h3>
+
+                    <p>
+                        Docker Tutorial in Telugu
+                    </p>
+
+                </div>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     LEARNING PATH
+========================== -->
+
+<section id="learning">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Learning Paths</h2>
+
+            <p>
+                Follow a structured path from beginner to advanced.
+            </p>
+
+        </div>
+
+        <div class="learning-grid">
+
+
+            <div class="learning-card" id="linux">
+
+                <h3>🐧 Linux Roadmap</h3>
+
+                <p>
+                    Build strong Linux fundamentals
+                    for system administration and DevOps.
+                </p>
+
+                <ul>
+                    <li>✓ Linux Basics</li>
+                    <li>✓ File System</li>
+                    <li>✓ Linux Commands</li>
+                    <li>✓ Users & Permissions</li>
+                    <li>✓ Services & Processes</li>
+                    <li>✓ Shell Scripting</li>
+                </ul>
+
+            </div>
+
+
+            <div class="learning-card" id="aws">
+
+                <h3>☁️ AWS Roadmap</h3>
+
+                <p>
+                    Learn the important AWS services
+                    used in real-world environments.
+                </p>
+
+                <ul>
+                    <li>✓ AWS Fundamentals</li>
+                    <li>✓ EC2</li>
+                    <li>✓ VPC & Networking</li>
+                    <li>✓ IAM</li>
+                    <li>✓ EBS & S3</li>
+                    <li>✓ CloudWatch</li>
+                </ul>
+
+            </div>
+
+
+            <div class="learning-card" id="devops">
+
+                <h3>⚙️ DevOps Roadmap</h3>
+
+                <p>
+                    Learn the tools required to start
+                    your DevOps journey.
+                </p>
+
+                <ul>
+                    <li>✓ Git & GitHub</li>
+                    <li>✓ Linux</li>
+                    <li>✓ Docker</li>
+                    <li>✓ Terraform</li>
+                    <li>✓ Jenkins</li>
+                    <li>✓ CI/CD</li>
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     INTERVIEW
+========================== -->
+
+<section id="interview" class="resources">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Interview Preparation</h2>
+
+            <p>
+                Prepare for real-world technical interviews.
+            </p>
+
+        </div>
+
+        <div class="resource-grid">
+
+            <div class="resource">
+
+                <div class="resource-icon">🐧</div>
+
+                <h3>Linux Interview Questions</h3>
+
+                <p>
+                    Common Linux administrator questions
+                    with simple explanations.
+                </p>
+
+            </div>
+
+
+            <div class="resource">
+
+                <div class="resource-icon">☁️</div>
+
+                <h3>AWS Interview Questions</h3>
+
+                <p>
+                    EC2, VPC, EBS, IAM and
+                    AWS scenario-based questions.
+                </p>
+
+            </div>
+
+
+            <div class="resource">
+
+                <div class="resource-icon">⚙️</div>
+
+                <h3>DevOps Interview Questions</h3>
+
+                <p>
+                    Git, Docker, Terraform, Jenkins
+                    and CI/CD interview preparation.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FREE RESOURCES
+========================== -->
+
+<section id="resources">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Free Learning Resources</h2>
+
+            <p>
+                Useful resources to support your learning journey.
+            </p>
+
+        </div>
+
+        <div class="resource-grid">
+
+            <div class="resource">
+
+                <div class="resource-icon">📄</div>
+
+                <h3>Linux Notes</h3>
+
+                <p>
+                    Linux commands, concepts and
+                    interview preparation notes.
+                </p>
+
+            </div>
+
+
+            <div class="resource">
+
+                <div class="resource-icon">☁️</div>
+
+                <h3>AWS Notes</h3>
+
+                <p>
+                    AWS service explanations,
+                    diagrams and practical notes.
+                </p>
+
+            </div>
+
+
+            <div class="resource">
+
+                <div class="resource-icon">📚</div>
+
+                <h3>DevOps Cheat Sheets</h3>
+
+                <p>
+                    Git, Docker, Terraform and
+                    DevOps quick reference guides.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     ABOUT
+========================== -->
+
+<section id="about">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>About Avi Tech Info Telugu</h2>
+
+            <p>
+                Making technical learning simple and practical in Telugu.
+            </p>
+
+        </div>
+
+        <div style="
+            max-width:850px;
+            margin:auto;
+            text-align:center;
+            color:#aab5c7;
+            font-size:17px;
+        ">
+
+            <p>
+                Avi Tech Info Telugu is a learning platform focused on
+                Linux, AWS and DevOps. The goal is to explain technical
+                concepts in simple language with practical examples,
+                real-world scenarios and interview preparation.
+            </p>
+
+            <br>
+
+            <p>
+                Learn step by step, practice regularly and build
+                the skills needed for your IT career.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     NEWSLETTER
+========================== -->
+
+<section class="newsletter">
+
+    <div class="container newsletter-box">
+
+        <div>
+
+            <h2>📩 Stay Updated</h2>
+
+            <p>
+                Get new tutorials, notes and learning updates.
+            </p>
+
+        </div>
+
+        <form class="newsletter-form"
+              onsubmit="subscribeMessage(event)">
+
+            <input
+                type="email"
+                placeholder="Enter your email"
+                required
+            >
+
+            <button type="submit">
+                Subscribe
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CONTACT
+========================== -->
+
+<section id="contact">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Connect With Me</h2>
+
+            <p>
+                Follow Avi Tech Info Telugu for new tutorials and updates.
+            </p>
+
+        </div>
+
+        <div class="buttons"
+             style="justify-content:center;">
+
+            <a href="https://www.youtube.com/"
+               target="_blank"
+               class="btn btn-primary">
+                ▶ YouTube
+            </a>
+
+            <a href="#"
+               class="btn btn-outline">
+                📷 Instagram
+            </a>
+
+            <a href="#"
+               class="btn btn-outline">
+                💼 LinkedIn
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     WHATSAPP
+========================== -->
+
+<!--
+IMPORTANT:
+Replace 91XXXXXXXXXX with your WhatsApp number.
+
+Example:
+https://wa.me/919876543210
+-->
+
+<a href="https://wa.me/91XXXXXXXXXX"
+   target="_blank"
+   class="whatsapp">
+
+    💬 Chat on WhatsApp
+
+</a>
+
+
+<!-- =========================
+     FOOTER
+========================== -->
+
+<footer>
+
+    <div class="container">
+
+        <div class="footer-content">
+
+            <div>
+
+                <h3>Avi Tech Info Telugu</h3>
+
+                <p>
+                    Learn Linux, AWS & DevOps in Telugu –
+                    Step by Step.
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h3>Learning</h3>
+
+                <ul>
+                    <li>Linux</li>
+                    <li>AWS</li>
+                    <li>DevOps</li>
+                    <li>Interview Q&A</li>
+                </ul>
+
+            </div>
+
+
+            <div>
+
+                <h3>Quick Links</h3>
+
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#videos">YouTube</a></li>
+                    <li><a href="#resources">Free Notes</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+
+            </div>
+
+        </div>
+
+
+        <div class="copyright">
+
+            © 2026 Avi Tech Info Telugu. All Rights Reserved.
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- =========================
+     JAVASCRIPT
+========================== -->
+
+<script>
+
+    function toggleMenu() {
+
+        const menu = document.getElementById("navigation");
+
+        menu.classList.toggle("active");
+
+    }
+
+
+    function subscribeMessage(event) {
+
+        event.preventDefault();
+
+        alert(
+            "Thank you for subscribing! Newsletter functionality will be added soon."
+        );
+
+    }
+
+</script>
+
+</body>
+</html>
